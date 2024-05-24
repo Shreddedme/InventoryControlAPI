@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "a1fdedaf-28e0-4446-844b-c7b29e09fdd2",
+		"name": "Warehouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20794617"
+	},
+	"item": [
+		{
+			"name": "reserve",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uniqueCodes\": [\"LKB-RE-2024-00001\", \"LKB-RE-2024-00002\"]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:42859/api/reserve-products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "42859",
+					"path": [
+						"api",
+						"reserve-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "release",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uniqueCodes\": [\"LKB-RE-2024-00001\", \"LKB-RE-2024-00002\"]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:42859/api/release-products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "42859",
+					"path": [
+						"api",
+						"release-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:42859/api/warehouse-stock/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "42859",
+					"path": [
+						"api",
+						"warehouse-stock",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
